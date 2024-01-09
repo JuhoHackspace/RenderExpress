@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Express example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #header-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #f00;
+            font-size: 2em;
+            z-index: 1; /* Ensure the header is above the PIXI canvas */
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <h1>Welcome to my Express example on Render.com</h1>
+    </div>
+    <script>
+        const headerContainer = document.getElementById('header-container');
+
+        // Function to toggle visibility (blink)
+        function blinkText() {
+            headerContainer.style.visibility = (headerContainer.style.visibility === 'visible') ? 'hidden' : 'visible';
+        }
+
+        // Set up a setInterval to call blinkText every 500 milliseconds (adjust as needed)
+        setInterval(blinkText, 500);
+    </script>
+</body>
+</html>
